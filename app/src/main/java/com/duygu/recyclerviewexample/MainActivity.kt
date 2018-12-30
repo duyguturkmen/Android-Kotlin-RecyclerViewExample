@@ -10,22 +10,22 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerView.adapter = Adapter(getModels())
     }
 
-    fun getModels(): MutableList<Model> {
+    fun getModels(): MutableList<CountryModel> {
 
         val models = mutableListOf(
-            Model(R.drawable.cin, "Çin", "Pekin"),
-            Model(R.drawable.misir, "Mısır", "Kahire"),
-            Model(R.drawable.almanya, "Almanya", "Berlin"),
-            Model(R.drawable.turkey, "Türkiye", "Ankara"),
-            Model(R.drawable.rusya, "Rusya", "Moskova"),
-            Model(R.drawable.ingiltere, "İngiltere", "Londra"),
-            Model(R.drawable.ukrayna, "Ukrayna", "Kiev"),
-         //   Model(R.drawable.abd, "ABD", "Washington DC"),
-            Model(R.drawable.japonya, "Japonya", "Tokyo")
+            CountryModel(R.drawable.cin, "Çin", "Pekin"),
+            CountryModel(R.drawable.misir, "Mısır", "Kahire"),
+            CountryModel(R.drawable.almanya, "Almanya", "Berlin"),
+            CountryModel(R.drawable.turkey, "Türkiye", "Ankara"),
+            CountryModel(R.drawable.rusya, "Rusya", "Moskova"),
+            CountryModel(R.drawable.ingiltere, "İngiltere", "Londra"),
+            CountryModel(R.drawable.ukrayna, "Ukrayna", "Kiev"),
+            CountryModel(R.drawable.japonya, "Japonya", "Tokyo")
 
         )
 

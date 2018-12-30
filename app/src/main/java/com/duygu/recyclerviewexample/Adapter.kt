@@ -8,14 +8,14 @@ import android.widget.ImageView
 import android.widget.TextView
 
 
-class Adapter(val countryList: MutableList<Model>) : RecyclerView.Adapter<Adapter.ModelViewHolder>() {
+class Adapter(val countryList: MutableList<CountryModel>) : RecyclerView.Adapter<Adapter.ModelViewHolder>() {
 
     class ModelViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val countryName: TextView = view.findViewById(R.id.countryName)
         val capitalName: TextView = view.findViewById(R.id.capitalName)
         val flagImage: ImageView = view.findViewById(R.id.flagImage)
 
-        fun bindItems(item: Model) {
+        fun bindItems(item: CountryModel) {
             countryName.setText(item.countryName)
             capitalName.setText(item.capitalName)
             flagImage.setImageResource(item.flagImage)
